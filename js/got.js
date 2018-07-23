@@ -123,7 +123,7 @@ function createOneCharacter(character) {
   listDiv.appendChild(charDescription);
 }
 
-document.querySelector('#search-button').onclick = function characterSearch(userDatas) {
+document.querySelector('#search-button').onclick = function characterSearch() {
   var userSearch = document.querySelector('#search-text').value.toLowerCase();
   var forSearch = document.querySelectorAll('.character-item');
   var found;
