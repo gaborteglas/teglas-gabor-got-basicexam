@@ -123,11 +123,11 @@ function createOneCharacter(character) {
   listDiv.appendChild(charDescription);
 }
 
-document.querySelector('#search-button').onclick = function characterSearch() {
-  var userSearch = document.querySelector('#search-text').value;
+document.querySelector('#search-button').onclick = function characterSearch(userDatas) {
+  var userSearch = document.querySelector('#search-text').value.toLowerCase();
   var found = [];
   for (var i = 0; i < userDatas.length; i++) {
-    if (userDatas[i].name === userSearch) {
+    if (userDatas[i].name.toLowerCase() === userSearch) {
       found.push(userDatas[i]);
     }
   }
