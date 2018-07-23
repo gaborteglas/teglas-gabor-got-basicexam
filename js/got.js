@@ -14,6 +14,7 @@ function successAjax(xhttp) {
   var userDatas = JSON.parse(xhttp.responseText)[2].data;
   userDatas = sortDead(userDatas);
   userDatas = orderedCharacters(userDatas);
+  showCharacterList(userDatas);
   /*
       Pár sorral lejebb majd ezt olvashatod:
       IDE ÍRD A FÜGGVÉNYEKET!!!!!! NE EBBE AZ EGY SORBA HANEM INNEN LEFELÉ!
@@ -70,4 +71,25 @@ function createListDiv(container) {
     container.appendChild(listDiv);
   }
   return listDiv;
+}
+
+function createCharacter(list, character) {
+  var itemDiv = document.createElement('div');
+  itemDiv.className = 'character-item';
+  itemDiv.character = character;
+  itemDiv.onclick = function addOnclick() {
+    createOneCharacter(this.character);
+  };
+
+  var img = document.createElement('img');
+  img.src = '/' + character.portrait;
+  img.alt = 'No picture found';
+
+  var span = document.createElement('div');
+  span.innerHTML = character.name;
+
+  itemDiv.appendChild(img);
+  itemDiv.appendChild(span);
+
+  list.appendChild(itemDiv);
 }
