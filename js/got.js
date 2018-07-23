@@ -93,3 +93,32 @@ function createCharacter(list, character) {
 
   list.appendChild(itemDiv);
 }
+
+function createOneCharacter(character) {
+  var container = document.querySelector('.search-div');
+  var listDiv = createListDiv(container);
+  listDiv.innerHTML = '';
+
+  var img = document.createElement('img');
+  img.src = '/' + character.picture;
+  img.alt = 'No picture';
+  img.className = 'search-pic';
+
+  var title = document.createElement('div');
+  title.className = 'house-div';
+  title.innerHTML = character.name;
+
+  var charDescription = document.createElement('div');
+  charDescription.className = 'char-bio';
+  charDescription.innerHTML = character.bio;
+
+  var imgHouse = document.createElement('img');
+  imgHouse.src = '/assets/houses/' + character.house + '.png';
+  imgHouse.className = 'house-pic';
+  imgHouse.alt = 'No picture!';
+
+  listDiv.appendChild(img);
+  listDiv.appendChild(title);
+  listDiv.appendChild(imgHouse);
+  listDiv.appendChild(charDescription);
+}
