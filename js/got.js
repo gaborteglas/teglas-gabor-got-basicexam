@@ -122,3 +122,14 @@ function createOneCharacter(character) {
   listDiv.appendChild(imgHouse);
   listDiv.appendChild(charDescription);
 }
+
+document.querySelector('#search-button').onclick = function characterSearch() {
+  var userSearch = document.querySelector('#search-text').value;
+  var found = [];
+  for (var i = 0; i < userDatas.length; i++) {
+    if (userDatas[i].name === userSearch) {
+      found.push(userDatas[i]);
+    }
+  }
+  createOneCharacter(found);
+};
