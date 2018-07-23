@@ -61,3 +61,13 @@ function showCharacterList(userDatas) {
     createCharacter(listDiv, userDatas[i]);
   }
 }
+
+function createListDiv(container) {
+  var listDiv = container.querySelector('.list-div');
+  if (!listDiv) {
+    listDiv = document.createElement('div');
+    listDiv.className = 'list-div';
+    container.appendChild(listDiv);
+  }
+  return listDiv;
+}
