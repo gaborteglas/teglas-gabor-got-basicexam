@@ -1,0 +1,7 @@
+SELECT COUNT(house), house FROM `characters` WHERE NOT dead = 'true' AND organization = '' GROUP BY house;
+
+SELECT * FROM `characters` WHERE NOT DEAD = 'true' AND bio LIKE '%hero%';
+
+SELECT name FROM `characters` WHERE NOT dead = 'true' AND house = '' AND organization = 'nightwatch';
+
+SELECT name AS Hero, alias AS NickName, house AS BigHouse FROM `characters` WHERE NOT dead = 'true' AND NOT house = 'Lannister' AND NOT organization = 'royalguard' AND bio NOT LIKE '%Lannister%' AND bio NOT LIKE "%King's Landing%"
