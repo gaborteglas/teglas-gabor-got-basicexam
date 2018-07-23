@@ -60,3 +60,24 @@ div{
     text-align: center;
     vertical-align: top;
   }
+
+  .search-pic {
+    width: 20vw;
+  }
+
+  .house-div {
+    box-sizing:border-box;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .house-pic {
+    box-sizing:border-box;
+    float: right;
+  }
+
+  .char-bio {
+    margin-top: 20px;
+    float: left;
+  }
