@@ -125,11 +125,18 @@ function createOneCharacter(character) {
 
 document.querySelector('#search-button').onclick = function characterSearch(userDatas) {
   var userSearch = document.querySelector('#search-text').value.toLowerCase();
-  var found = [];
-  for (var i = 0; i < userDatas.length; i++) {
-    if (userDatas[i].name.toLowerCase() === userSearch) {
-      found.push(userDatas[i]);
+  var forSearch = document.querySelectorAll('.character-item');
+  var found;
+  for (var i = 0; i < forSearch.length; i++) {
+    if (forSearch[i].character.name.toLowerCase() === userSearch) {
+      found = forSearch[i].character;
     }
   }
-  createOneCharacter(found);
+  if (!found) {
+    var container = document.querySelector('.search-div');
+    var listDiv = createListDiv(container);
+    listDiv.innerHTML = 'Character not found!';
+  } else {
+    createOneCharacter(found);
+  }
 };
