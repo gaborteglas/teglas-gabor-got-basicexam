@@ -1,0 +1,40 @@
+div{
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .container{
+    width:100%;
+    min-height: 100vh;
+    padding:0;
+  }
+
+  .container>div{
+    float: left;
+    height: 100vh;
+
+  }
+
+  .map-div{
+    width: 75%;
+    background-image: url('/assets/site/mapblue.jpg');
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+
+  .search-div{
+    width: 25%;
+    background: #24272C;
+  }
+
+  .search-bar{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  #search-text {
+    border-radius: 3px;
+  }
