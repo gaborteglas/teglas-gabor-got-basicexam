@@ -52,3 +52,12 @@ function orderedCharacters(characters) {
   }
   return characters;
 }
+
+function showCharacterList(userDatas) {
+  var container = document.querySelector('.map-div');
+  var listDiv = createListDiv(container);
+  listDiv.innerHTML = '';
+  for (var i = 0; i < userDatas.length; i++) {
+    createCharacter(listDiv, userDatas[i]);
+  }
+}
